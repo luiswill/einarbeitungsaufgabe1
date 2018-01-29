@@ -1,0 +1,1029 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+    /* Responsive min and max size for header image, menu and content */
+
+
+.wrapper{
+    min-width: 320px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.only-medium{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+/* Responsive image header */
+
+.header{
+    position: relative;
+}
+
+.images-container{
+    position: relative;
+}
+
+.header-image{
+    left: 1px;
+    width: 100%;
+    height: auto;
+    max-height: 393px;
+    z-index: 1;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+
+.siemens-logo{
+    position: absolute;
+    left: 15%;
+    top: 0;
+    z-index: 3;
+    width: 140px; /* Fixed size */
+    cursor: pointer;
+}
+
+
+.quote-header{
+    display: none;
+}
+
+
+.slide-buttons{
+    position: absolute;
+    cursor: pointer;
+    z-index: 16;
+}
+
+.previous-slide-button{
+    top: 40%;
+}
+
+.next-slide-button{
+    top: 40%;
+    right: 0;
+}
+
+@font-face {
+    font-family: 'Siemens Slab';
+    src: url("../fonts/siemens-slab.ttf");
+}
+
+
+/* ==========================================================================
+   Columns and rows specifications
+   ========================================================================== */
+
+.row{
+    margin: 0;
+}
+
+.col{
+    margin: 0;
+
+}
+
+.col--medium-4{
+
+}
+
+
+.col--medium-6{
+
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navigation{
+    display: flex;
+    background-color: #000000; /*  #0f1923*/
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.navigation ul {
+    padding: 0; /* Unexpected margin and padding from default css settings*/
+    margin: 0;
+    width: 100%;
+}
+
+
+.navigation ul li:first-child{
+    border-top: none;
+}
+
+.navigation__element{
+    list-style: none;
+    border-top: 1px solid #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navigation__element a{
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #7d8791;
+    text-decoration: none;
+}
+
+.active a{
+    color: #FFFFFF;
+}
+
+.active-menu-item{
+    position: relative;
+}
+
+.arrow-down-navigation{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #FFFFFF;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+
+
+/* NAVIGATION TOP CORNER RIGHT */
+.navigation-right-corner{
+    display: none;
+}
+
+
+/* ==========================================================================
+   Content
+========================================================================== */
+
+/* Content Sections */
+
+.content{
+    position: relative;
+}
+
+
+.section{
+    padding: 15px;
+}
+
+.section--accordion{
+    padding: 15px;
+    background-color: #323c46;
+}
+
+
+.col{
+    margin-bottom: 10px;
+}
+
+.headline{
+    font-weight: normal;
+    font-size: 28px;
+    font-family: 'Siemens Slab', 'Times New Roman', serif;
+    padding-bottom: 15px;
+    color: #FFFFFF;
+}
+
+
+.go-top-button{
+    border: none;
+    background-color: #0f1923;
+    position: absolute;
+    color: #FFFFFF;
+    padding-left: 35px;
+    padding-right: 10px;
+    border-radius: 3px;
+    bottom: 1%;
+    right: 0;
+}
+
+
+
+.arrow-go-top-page{
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #FFFFFF;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 7px;
+    right: 43px;
+}
+
+
+p{
+    color: #323C46;
+    font-family: Arial, sans-serif;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.theme-1 p{
+    color: #C8D2D7;
+}
+
+.theme-1 .headline{
+    color: #9aa3ad;
+}
+
+.theme-2 p{
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.theme-2{
+    padding-bottom: 60px;
+}
+
+.accordion p{
+    color: #FFFFFF;
+}
+
+.exception-1 p{
+    margin-bottom: 20px;
+}
+
+/* SECTION WHAT MOVES US */
+
+.what-moves-us{
+    background-color: #323c46;
+    color: #FFFFFF;
+    line-height: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.accordion .col{
+    background-color: #475059;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.accordion .top-accordion{
+    padding: 20px 20px 20px 20px;
+    border-top: 1px solid #CCCCCC
+}
+
+.accordion .top-accordion h4{
+    color: #FFFFFF;
+    font-family: serif;
+    line-height: 18px;
+    font-weight: normal;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.active-headline-accordion{
+    padding-bottom: 20px;
+}
+
+.accordion .col button, .accordion_block .panel{
+    padding-left: 1em;
+}
+
+.accordion .col .panel{
+    padding-bottom: 1em;
+}
+
+.accordion .accordion_block{
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion .top-accordion p{
+    max-height: 0;
+    opacity: 0;
+}
+
+.accordion .bottom-accordion h4 {
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    line-height: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #050A0F;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    padding-left: 25px;
+}
+
+
+.arrow-down-accordion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #EB780A;
+    width: 0;
+    height: 0;
+}
+
+.arrow-up-accordion{
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #EB780A;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 13;
+}
+
+
+.arrow-go-external-page{
+    max-width: 15px;
+    margin-left: 10px;
+    display: none;
+}
+
+
+/* SECTION CEO PROGRAM */
+.ceo-program .headline{
+    color: #96A0AA;
+}
+
+.ceo-program img{
+    border-top: 1px solid #000000;
+}
+
+.ceo-program img{
+    width: 100%;
+}
+
+.button-more-facts{
+    color: #FFFFFF;
+    background-color:  #475059;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 1.3em;
+}
+
+.containerButton{
+    position: relative;
+}
+
+
+/* SECTION FAST FACTS */
+.fast-facts{
+    display: none;
+}
+
+.fast-facts .headline{
+    color: #96A0AA;
+}
+
+.fast-facts p{
+    position: absolute;
+    max-width: 300px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.fast-facts-container{
+    margin-top: 2em;
+}
+
+.topPadding {
+    padding-top:12%;
+}
+
+.exception-1{
+    width: 100%;
+}
+
+/* SECTION CHANCE EXCEL */
+
+.chance-excel{
+    color: #FFFFFF;
+    position: relative;
+}
+
+
+.image-excel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+
+/* ==========================================================================
+                FOOTER
+========================================================================== */
+footer{
+    padding: 20px 5px 7px 15px;
+}
+
+footer p{
+    font-size: 0.7em;
+}
+
+footer .navigation-footer ul li{
+    display: inline-block;
+}
+
+footer .navigation-footer ul li a{
+    font-size: 0.7em;
+    color: #666666;
+    text-decoration: none;
+    margin-right: 1em;
+    margin-left: 0.5em;
+}
+
+footer .navigation-footer ul li:after{
+    content: '|';
+    color: #666666;
+}
+
+
+
+/* ===========================================
+                RESPONSIVE
+ =============================================
+ */
+
+
+
+@media only screen and (min-width: 768px){
+    .section{
+        padding: 65px 45px 40px 40px;
+    }
+
+    .section--accordion{
+        padding: 0;
+    }
+
+    .headline{
+        padding-bottom: 25px;
+    }
+
+    /* HEADER */
+    .images-container{
+        position: relative;
+    }
+
+    header .row{
+        position: absolute;
+        height: 100%;
+        top: 0;
+    }
+
+    .header-image{
+        transform: none;
+    }
+
+    .header-text{
+        color: #FFFFFF;
+        font-family: 'Times New Roman', sans-serif;
+        font-weight: normal;
+        font-size: 45px;
+        line-height: 40px;
+        display: inline;
+        position: absolute;
+        bottom: 15%;
+    }
+
+
+    .quote-header{
+        position: absolute;
+    }
+
+
+
+    /* THEME SPECIFIC */
+    .theme-2 .headline{
+        color: #96A0AA;
+    }
+
+    .theme-2 p{
+        color: #9EADBE;
+    }
+
+    .theme-2{
+        padding-bottom: 100px;
+        box-shadow: inset 0 15px 27px -9px black
+    }
+
+    /* NAVIGATION */
+
+    .navigation{
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 8px 20px -6px #000000;
+        justify-content: space-evenly;
+    }
+
+    .navigation ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation ul li{
+        border: none;
+        display: inline-flex;
+        margin-right: 50px;
+    }
+
+
+    .active-menu-item{
+        justify-content: center;
+    }
+
+    .arrow-down-navigation{
+        margin: 0;
+    }
+
+
+
+    /* NAVIGATION TOP RIGHT CORNER*/
+
+    .navigation-right-corner{
+        position: absolute;
+        top: 6px;
+        right: 0;
+        display: block;
+        background-color: #475059;
+        opacity: 0.9;
+        z-index: 15;
+    }
+
+    .navigation-right-corner ul{
+        margin: 10px 40px 7px 18px;
+    }
+
+    .navigation-right-corner ul li{
+        list-style-type: none;
+        line-height: 21px;
+
+    }
+
+    .navigation-right-corner ul li a{
+        color: #77818B;
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .navigation-right-corner ul li a:hover{
+        color: #F58C14;
+    }
+
+    /* CONTENT */
+
+    .what-moves-us{
+        position: relative;
+        z-index: 1;
+    }
+
+    .arrow-down-navigation{
+        border-top-color: #000000;
+        bottom: -34%;
+    }
+
+    .only-mobile{
+        display: none;
+    }
+
+    .only-medium{
+        display: block;
+    }
+
+    /* Columns and rows */
+    .row{
+        display: flex;
+        width: 100%;
+    }
+
+    .col--medium-4{
+        min-width: 30%;
+        padding: 10px 40px 0 0;
+    }
+
+    .ceo-program .col--medium-4{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .col--medium-4:first-child{
+        padding-left: 0;
+    }
+
+    .col--medium-6{
+        display: inline-flex;
+        max-width: 49%;
+    }
+
+    .col--medium-6:first-child{
+        margin-right: 50px;
+    }
+
+    .col--medium-8{
+        width: 66.6667%;
+    }
+
+    .accordion{
+        display: flex;
+    }
+
+    .accordion .col{
+        position: relative;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .section--accordion .col{
+        margin: 0;
+    }
+
+
+    .accordion .col .panel img{
+        display: block;
+        max-width: 100%;
+        transition: height 1s;
+    }
+
+    .accordion .col button{
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background-color: #050A0F;
+        opacity: 0.7;
+    }
+
+     .accordion .accordion_block{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+     }
+
+    .accordion .top-accordion{
+        width: 100%;
+        height: 100%; /* SOLVED !:D */
+        position: absolute;
+        top: -150%;
+        background-color: #475059;
+        z-index: 13;
+        transition: 1s ease;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .accordion .top-accordion {
+        padding: 0;
+    }
+
+    .accordion .top-accordion h4{
+
+        color: #FFFFFF;
+        font-size: 1.2em;
+        font-weight: normal;
+        line-height: 18px;
+        margin: 20px 25px 0 13%;
+    }
+
+    .accordion .top-accordion p{
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        opacity: 1;
+        color: #FFFFFF;
+        margin: 8px 8% 10px 13%;
+    }
+
+
+    .accordion .accordion_block:hover{
+        cursor: pointer; /* just UX */
+    }
+
+    .accordion .accordion_block:hover .top-accordion{
+        cursor: pointer;
+        top: 0;
+    }
+
+
+
+    /* DISPLAY FAST FACTS CONTENT  */
+
+    .fast-facts{
+        display: block;
+    }
+
+    .arrow-down-accordion, .arrow-up-accordion{
+        z-index: 12;
+        left: 25px;
+    }
+
+
+    /* FOOTER */
+
+    footer ul li:last-child:after{
+        content: '';
+    }
+}
+
+
+
+@media only screen and (min-width:1024px) {
+    .accordion .top-accordion h4{
+        margin: 30px 25px 0 20%;
+    }
+
+    .accordion .top-accordion p{
+        margin: 10px 8% 10px 20%;
+    }
+
+
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
